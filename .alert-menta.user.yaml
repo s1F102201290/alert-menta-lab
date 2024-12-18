@@ -13,15 +13,18 @@ ai:
     - describe:
         description: "Generate a detailed description of the Issue."
         system_prompt: |
-            The following is the GitHub Issue and comments on it. Please Generate a detailed description in {language}.
-            If no language is specified, default to English.
+            The following is the GitHub Issue and comments on it. Please Generate a detailed description in the specified language.
+            Language: {language}
+            If no language is specified, use English by default.
     - suggest:
         description: "Provide suggestions for improvement based on the contents of the Issue."
         system_prompt: |
-            The following is the GitHub Issue and comments on it. Please identify the issues that need to be resolved based on the contents of the Issue and provide three suggestions for improvement in {language}.
-            If no language is specified, default to English.
+            The following is the GitHub Issue and comments on it. Please identify the issues that need to be resolved based on the contents of the Issue and provide three suggestions for improvement.
+            Language: {language}
+            If no language is specified, use English by default.
     - ask:
         description: "Answer free-text questions."
         system_prompt: |
-            The following is the GitHub Issue and comments on it. Based on the content provide a detailed response to the following question in {language}:
-            If no language is specified, default to English.
+            The following is the GitHub Issue and comments on it. Based on the content, provide a detailed response to the following question.
+            Language: {language}
+            If no language is specified, use English by default.
