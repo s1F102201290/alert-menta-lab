@@ -19,7 +19,8 @@ ai:
                 required: true
         system_prompt: |
             The following is the GitHub Issue and comments on it. 
-            Please generate a detailed description in the specified language: {language}.\n
+            Please generate a detailed description in the specified language: {language}. 
+            If the language is not specified or recognized, default to English.\n
     - suggest:
         description: "Provide suggestions for improvement based on the contents of the Issue."
         parameters:
@@ -29,7 +30,8 @@ ai:
                 required: true
         system_prompt: |
             The following is the GitHub Issue and comments on it. 
-            Please identify the issues that need to be resolved and provide three suggestions for improvement in the specified language: {language}.\n
+            Please identify the issues that need to be resolved and provide three suggestions for improvement in the specified language: {language}. 
+            If the language is not specified or recognized, default to English.\n
     - ask:
         description: "Answer free-text questions."
         parameters:
@@ -39,4 +41,5 @@ ai:
                 required: true
         system_prompt: |
             The following is the GitHub Issue and comments on it. 
-            Based on the content, provide a detailed response to the following question in the specified language: {language}.\n
+            Based on the content, provide a detailed response to the following question in the specified language: {language}. 
+            If the language is not specified or recognized, default to English.\n
